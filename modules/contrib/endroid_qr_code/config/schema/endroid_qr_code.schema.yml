@@ -1,0 +1,13 @@
+endroid_qr_code.settings:
+  type: config_object
+  label: 'Endroid QR Code settings'
+  mapping:
+    logo_width:
+      type: integer
+      label: 'Width dimension of the embedded logo'
+    set_size:
+      type: integer
+      label: 'Width of the QR code'
+    set_margin:
+      type: integer
+      label: 'Margin on the QR code'

@@ -1,0 +1,5 @@
+endroid_qr_code.admin_settings:
+  title: 'Endroid QR Code'
+  route_name: endroid_qr_code.admin_settings
+  description: 'Manage Endroid QR code configuration.'
+  parent: system.admin_config_ui
