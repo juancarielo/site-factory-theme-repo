@@ -1,0 +1,13 @@
+name: 'QR Field'
+type: module
+description: 'Simple QR field'
+package: 'Field types'
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - token:token
+
+# Information added by Drupal.org packaging script on 2023-09-04
+version: '1.0.0-alpha7'
+project: 'qrfield'
+datestamp: 1693860288

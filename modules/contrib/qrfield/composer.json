@@ -1,0 +1,15 @@
+{
+    "name": "drupal/qrfield",
+    "description": "Creates a field for displaying QR codes based on input",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require": {
+      "drupal/token": "^1.11"
+    },
+    "authors": [
+        {
+            "name": "Borut Piletic",
+            "email": "bpnet.blog@gmail.com"
+        }
+    ]
+}
