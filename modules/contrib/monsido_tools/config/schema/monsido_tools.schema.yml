@@ -1,0 +1,34 @@
+monsido_tools.settings:
+  type: config_object
+  label: 'Monsido Tools'
+  mapping:
+    enable:
+      type: boolean
+      label: 'Enable'
+    token:
+      type: string
+      label: 'Token'
+    add_page_assist_script:
+      type: string
+      label: 'Add Page Assist Script'
+    enable_statistics:
+      type: boolean
+      label: 'Enable Statistics'
+    enable_cookieless_tracking:
+      type: boolean
+      label: 'Enable Cookieless Tracking'
+    enable_document_tracking:
+      type: boolean
+      label: 'Enable Document Tracking'
+    add_pagecorrect:
+      type: boolean
+      label: 'Add PageCorrect'
+    add_heatmaps:
+      type: boolean
+      label: 'Add Heatmaps'
+    add_monsido_consent_manager:
+      type: boolean
+      label: 'Add Monsido Consent Manager'
+    only_front_end:
+      type: boolean
+      label: 'Enable script only on the front-end'

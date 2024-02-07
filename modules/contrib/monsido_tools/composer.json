@@ -1,0 +1,13 @@
+{
+    "name": "monsido_tools",
+    "type": "drupal-module",
+    "description": "Integrating monsido to your website.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/monsido_tools",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/monsido_tools",
+        "source": "http://cgit.drupalcode.org/monsido_tools",
+    },
+}

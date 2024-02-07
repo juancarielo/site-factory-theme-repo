@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Contains monsido_tools.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function monsido_tools_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the monsido_tools module.
+    case 'help.page.monsido_tools':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integrating monsido to your website.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function monsido_tools_page_attachments(array &$attachments) {
+  $config = \Drupal::config('monsido_tools.settings');
+
+  if ($config->get('enable')) {
+    $is_admin_route = \Drupal::service('router.admin_context')->isAdminRoute();
+
+    // @todo Check if the option is only on the front-end, need to improve.
+    if ($is_admin_route && $config->get('only_front_end')) {
+      return;
+    }
+
+    // Attach library globally.
+    $attachments['#attached']['library'][] = 'monsido_tools/monsido_script';
+
+    // This library it's optional.
+    if ($config->get('add_monsido_consent_manager')) {
+      $attachments['#attached']['library'][] = 'monsido_tools/monsido_consent_manager';
+    }
+
+    // Pass the data to drupalSettings by js.
+    $attachments['#attached']['drupalSettings']['monsidoTools'] = [
+      'token' => $config->get('token'),
+
+      // Version.
+      'addPageAssistScript' => $config->get('add_page_assist_script'),
+
+      // Minimal.
+      'statistics' => $config->get('enable_statistics'),
+      'cookieLessTracking' => $config->get('enable_cookieless_tracking'),
+      'documentTracking' => $config->get('enable_document_tracking'),
+
+      // Addons.
+      'pageCorrect' => $config->get('add_pagecorrect'),
+      'heatmap' => $config->get('add_heatmaps'),
+      'enableConsentManager' => $config->get('add_monsido_consent_manager'),
+    ];
+  }
+}

@@ -1,0 +1,5 @@
+monsido.settings:
+  title: Monsido Settings
+  description: ''
+  parent: system.admin_config_system
+  route_name: monsido.admin_settings

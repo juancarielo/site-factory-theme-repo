@@ -1,0 +1,19 @@
+monsido_script:
+  header: true
+  version: 1.x
+  js:
+    https://app-script.monsido.com/v2/monsido-script.js: { type: external, minified: true, attributes: { async: true } }
+    js/monsido.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+monsido_consent_manager:
+  header: true
+  version: 1.x
+  js:
+    https://monsido-consent.com/v1/mcm.js: { type: external, minified: true }
+    js/monsido_consent_manager.js: {}
+  dependencies:
+    - monsido_tools/monsido_script

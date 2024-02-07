@@ -1,0 +1,7 @@
+monsido.admin_settings:
+  path: '/admin/config/monsido/settings'
+  defaults:
+    _form: '\Drupal\monsido_tools\Form\MonsidoSettingsForm'
+    _title: 'Monsido Settings'
+  requirements:
+    _permission: 'administer site configuration'
